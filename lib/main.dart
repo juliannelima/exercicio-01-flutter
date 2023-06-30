@@ -45,12 +45,15 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('logo'),
-        Text('menu'),
-        Text('profile'),
+        Image.asset(
+          'assets/images/logo.png',
+          // fit: BoxFit.cover,
+        ),
+        const Text('menu 1'),
+        const Text('menu 2'),
       ],
     );
   }
