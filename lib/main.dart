@@ -18,19 +18,24 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(32.0),
-          child: Container(
-            // color: Colors.green,
-            color: const Color(0xFFf2fbf8),
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
-              child: Column(
-                children: [
-                  Header(),
-                  SizedBox(
-                    height: 24,
-                  ),
-                  Main(),
-                ],
+          child: Center(
+            child: Container(
+              width: 1000,
+              height: 800,
+              alignment: Alignment.center,
+              // color: Colors.green,
+              color: const Color(0xFFf2fbf8),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
+                child: Column(
+                  children: [
+                    Header(),
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Main(),
+                  ],
+                ),
               ),
             ),
           ),
