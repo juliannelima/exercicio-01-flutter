@@ -28,7 +28,7 @@ class ListCardsWidget extends StatelessWidget {
         CardWidget(
           texto: 'Start with service',
           icon: Icons.support_agent_outlined,
-          cor: Colors.green,
+          cor: Color(0xFF009873),
         ),
         CardWidget(
           texto: 'Do the right thing',

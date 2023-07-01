@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'logo.dart';
+import 'menu_button.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});
@@ -12,7 +13,7 @@ class HeaderWidget extends StatelessWidget {
       children: [
         LogoWidget(),
         Text('menu 1'),
-        Text('menu 2'),
+        MenuButtonWidget(),
       ],
     );
   }
