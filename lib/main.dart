@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'components/header/index.dart';
+import 'components/main/index.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -29,156 +32,16 @@ class MyApp extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
                 child: Column(
                   children: [
-                    Header(),
+                    HeaderWidget(),
                     SizedBox(
                       height: 24,
                     ),
-                    Main(),
+                    MainWidget(),
                   ],
                 ),
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class Header extends StatelessWidget {
-  const Header({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Image.asset(
-          'assets/images/logo.png',
-          // fit: BoxFit.cover,
-        ),
-        const Text('menu 1'),
-        const Text('menu 2'),
-      ],
-    );
-  }
-}
-
-class Main extends StatelessWidget {
-  const Main({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        ContentWidget(),
-        SizedBox(height: 32),
-        ListCardsWidget(),
-      ],
-    );
-  }
-}
-
-class ContentWidget extends StatelessWidget {
-  const ContentWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Column(
-          children: [
-            Text('titulo'),
-            Text('paragrafo'),
-            // ElevatedButton(
-            //   onPressed: () {},
-            //   child: Text('view'),
-            // )
-          ],
-        ),
-        Image.asset(
-          'assets/images/imagem.png',
-          fit: BoxFit.cover,
-        ),
-      ],
-    );
-  }
-}
-
-class ListCardsWidget extends StatelessWidget {
-  const ListCardsWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        CardWidget(
-          texto: 'We re all on the same team',
-          icon: Icons.groups_2_outlined,
-          cor: Color(0xFFf4d076),
-        ),
-        CardWidget(
-          texto: 'A balanced life is a healthy life',
-          icon: Icons.favorite_border_outlined,
-          cor: Color(0xffca7270),
-        ),
-        CardWidget(
-          texto: '100% human',
-          icon: Icons.accessibility_new_outlined,
-          cor: Colors.deepPurple,
-        ),
-        CardWidget(
-          texto: 'Start with service',
-          icon: Icons.support_agent_outlined,
-          cor: Colors.green,
-        ),
-        CardWidget(
-          texto: 'Do the right thing',
-          icon: Icons.thumb_up_off_alt_outlined,
-          cor: Colors.blue,
-        ),
-      ],
-    );
-  }
-}
-
-class CardWidget extends StatelessWidget {
-  final IconData icon;
-  final String texto;
-  final Color cor;
-
-  const CardWidget({
-    super.key,
-    required this.icon,
-    required this.texto,
-    required this.cor,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 2,
-      margin: EdgeInsets.zero,
-      child: SizedBox(
-        width: 150,
-        height: 120,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              icon,
-              size: 32,
-              color: cor,
-            ),
-            const SizedBox(height: 8),
-            Text(
-              texto,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            ),
-          ],
         ),
       ),
     );
